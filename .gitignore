@@ -1,0 +1,24 @@
+# API keys and environment variables
+.env
+*.env
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated test output (optional - remove this line if you want generated tests visible on GitHub)
+generated_tests/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
