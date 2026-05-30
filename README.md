@@ -14,24 +14,24 @@ The generated output follows automation best practices, including Page Object Mo
 
 ## Tech Stack
 
-* **Language:** Python
-* **AI Integration:** OpenAI API (GPT-3.5-turbo)
-* **Automation Framework:** Selenium WebDriver
-* **Driver Management:** webdriver-manager
-* **Design Pattern:** Page Object Model (POM)
-* **Execution:** Command Line Interface (CLI)
+- Python
+- OpenAI API (GPT-3.5-turbo)
+- Selenium WebDriver
+- webdriver-manager
+- Page Object Model (POM)
+- Command Line Interface (CLI)
 
 ---
 
 ## Features
 
-* Converts plain-English requirements into Selenium automation scripts
-* Generates structured Page Object Model (POM) code
-* Includes explicit waits and validation assertions
-* Reduces manual test case creation effort
-* Produces reusable automation templates
-* Command-line based workflow for rapid test generation
-* Demonstrates practical AI integration for QA engineering
+- Converts plain-English requirements into Selenium automation scripts
+- Generates structured Page Object Model (POM) code
+- Includes explicit waits and validation assertions
+- Reduces manual test case creation effort
+- Produces reusable automation templates
+- Command-line based workflow for rapid test generation
+- Demonstrates practical AI integration for QA engineering
 
 ---
 
@@ -42,89 +42,16 @@ ai-test-generator/
 ├── generate_tests.py
 ├── requirements.txt
 ├── sample_output/
-│   └── login_test_sample.py
+│   ├── login_test_sample.py
+│   └── sample_run_output.txt
+├── screenshots/
+│   └── project-preview.png
 └── README.md
 ```
-
-### Folder Description
-
-* **generate_tests.py** – Main CLI application that interacts with the OpenAI API
-* **requirements.txt** – Project dependencies
-* **sample_output/** – Example generated Selenium test scripts
-* **README.md** – Project documentation
 
 ---
 
 ## How It Works
-
-### Step 1: Provide a Requirement
-
-```bash
-python generate_tests.py "User should be able to log in with valid credentials"
-```
-
-### Step 2: AI Processes the Requirement
-
-The application sends the requirement to the OpenAI API with a structured prompt designed to generate high-quality Selenium automation code.
-
-### Step 3: Test Script Generation
-
-The tool automatically generates:
-
-* Page Object Model structure
-* Selenium test script
-* Explicit waits
-* Validation assertions
-* Reusable automation components
-
-### Step 4: Save Output
-
-Generated scripts are automatically saved for further execution and customization.
-
----
-
-## Installation
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/KaveriC-tech/ai-test-generator.git
-cd ai-test-generator
-```
-
-### 2. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Configure OpenAI API Key
-
-Linux/macOS:
-
-```bash
-export OPENAI_API_KEY="your-api-key"
-```
-
-Windows:
-
-```cmd
-set OPENAI_API_KEY=your-api-key
-```
-
----
-
-## Running the Application
-
-Execute the generator with a requirement:
-
-```bash
-python generate_tests.py "User should be able to log in with valid credentials"
-```
-
----
-
-## Execution Example
 
 ### Input
 
@@ -132,93 +59,116 @@ python generate_tests.py "User should be able to log in with valid credentials"
 python generate_tests.py "User should be able to log in with valid credentials"
 ```
 
-### Generated Output
+### Processing
 
-The tool generates:
+The application sends the requirement to the OpenAI API with a structured prompt designed to generate Selenium automation code.
 
-* Login Page Object
-* Selenium automation script
-* Explicit waits for elements
-* Assertions for successful login
-* Reusable test structure following POM principles
+### Output
 
-Example output file:
+The tool automatically generates:
 
-```text
-generated_tests/login_test.py
+- Page Object Model structure
+- Selenium automation script
+- Explicit waits
+- Assertions
+- Reusable automation components
+
+---
+
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/KaveriC-tech/ai-test-generator.git
+cd ai-test-generator
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Configure API Key
+
+Linux/macOS:
+
+```bash
+export OPENAI_API_KEY="your-api-key"
+```
+
+Windows CMD:
+
+```cmd
+set OPENAI_API_KEY=your-api-key
+```
+
+Windows PowerShell:
+
+```powershell
+$env:OPENAI_API_KEY="your-api-key"
+```
+
+---
+
+## Running the Application
+
+```bash
+python generate_tests.py "User should be able to log in with valid credentials"
 ```
 
 ---
 
 ## Sample Output
 
-A sample generated automation script can be found here:
+Example generated test script:
 
 ```text
 sample_output/login_test_sample.py
 ```
 
-The generated script demonstrates:
+The generated output demonstrates:
 
-* Page Object Model implementation
-* Selenium WebDriver automation
-* Explicit waits
-* Assertion handling
-* Reusable automation patterns
+- Selenium WebDriver automation
+- Page Object Model implementation
+- Explicit waits
+- Assertions
+- Reusable automation design
+
+---
+
+## Project Preview
+
+![Project Preview](./screenshots/project-preview.png)
 
 ---
 
 ## Why This Project
 
-This project was built to explore how AI can improve software quality engineering workflows by automating repetitive test design activities.
+This project explores how AI can improve software quality engineering workflows by automating repetitive test design activities.
 
 It demonstrates:
 
-* Practical use of OpenAI API in QA automation
-* Python scripting and CLI development
-* Selenium WebDriver automation
-* Prompt engineering techniques
-* Automated test generation workflows
-* Scalable test architecture practices
-
----
-
-## Key Learning Outcomes
-
-* Building AI-assisted developer tools
-* Integrating external APIs into automation workflows
-* Generating structured automation code from natural-language inputs
-* Applying Page Object Model principles
-* Creating reusable QA productivity solutions
+- OpenAI API integration
+- Python scripting
+- Selenium automation
+- Prompt engineering
+- Test generation workflows
+- Scalable QA automation practices
 
 ---
 
 ## Future Enhancements
 
-* Playwright test generation support
-* API test case generation using Postman collections
-* CI/CD pipeline integration
-* Support for multiple automation frameworks
-* Web-based user interface
-* Enhanced prompt optimization for improved output accuracy
-* Support for BDD-style test generation
-* Automatic test data generation
-
----
-
-## Execution Preview
-
-Add screenshots of:
-
-* CLI execution
-* Generated Selenium output
-* Project workflow
-
-Example:
-
-```markdown
-![Execution Preview](./screenshots/execution-preview.png)
-```
+- Playwright test generation support
+- API test case generation using Postman collections
+- CI/CD integration
+- Support for multiple automation frameworks
+- Web-based user interface
+- Enhanced prompt optimization
+- BDD-style test generation
+- Automatic test data generation
 
 ---
 
